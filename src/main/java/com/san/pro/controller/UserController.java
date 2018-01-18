@@ -2,9 +2,6 @@ package com.san.pro.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,8 +20,9 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/saveUser", method = RequestMethod.POST)
-	public void saveUser(User user) {
-		System.out.println("done");
+	public String saveUser(User user) {
 		userService.addUser(user);
+		System.out.println("done");
+		return "save";
 	}
 }
