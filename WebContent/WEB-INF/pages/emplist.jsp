@@ -9,9 +9,9 @@
     <body>
     <h1>TEST PAGE</h1>
         <div>
+        <table>
         <c:forEach var="employee" items="${listEmployee}">
 				<tr>
-
 					<td>${employee.username}</td>
 					<td>${employee.password}</td>
 					<td>${employee.email}</td>
@@ -20,7 +20,7 @@
 						href="deleteEmployee?id=${employee.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
-	        
+		</table>
     	</div>
     </body>
 </html>
