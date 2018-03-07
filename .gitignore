@@ -3,3 +3,5 @@
 /.settings
 /.classpath
 /.project
+/ManageCredential-client/node_modules
+/ManageCredential-client/e2e
