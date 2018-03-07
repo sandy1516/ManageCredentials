@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.san.pro.dao.CredentialDAO;
 import com.san.pro.dao.UserDAO;
 import com.san.pro.model.User;
 
@@ -13,16 +14,15 @@ public class UserServiceImpl implements UserService{
 
 	@Autowired
 	private UserDAO userDAO;
+//	private CredentialDAO credentialDAO;
 	
 	@Override
 	public void addUser(User user) {
-		userDAO.create(user);
-		
+		userDAO.create(user);		
 	}
 
 	@Override
 	public List<User> list() {
-		// TODO Auto-generated method stub
-		return null;
+		return userDAO.list();
 	}
 }

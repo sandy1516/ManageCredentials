@@ -7,13 +7,20 @@
         <title>Home</title>
     </head>
     <body>
+    <h1>TEST PAGE</h1>
         <div>
-	        <form:form action="saveUser" method="POST" commandName="user">
-		        User Name: <form:input path="username" /> <br/>
-	        	Password: <form:input path="password"/> <br/>
-	        	Email Id: <form:input path="email"/> <br/>
-	        	<input type="submit" value="Submit" />
-			</form:form>
+        <c:forEach var="employee" items="${listEmployee}">
+				<tr>
+
+					<td>${employee.username}</td>
+					<td>${employee.password}</td>
+					<td>${employee.email}</td>
+					<td><a href="editEmployee?id=${employee.id}">Edit</a>
+						     <a
+						href="deleteEmployee?id=${employee.id}">Delete</a></td>
+				</tr>
+			</c:forEach>
+	        
     	</div>
     </body>
 </html>
