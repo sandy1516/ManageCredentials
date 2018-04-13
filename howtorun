@@ -1,4 +1,4 @@
-1). Generate the war for the ManageCredentialsStart.
+1). Generate the war for the ManageCredentials.
 2). Deploy the ManageCredentials.war in the tomcat server.
 3). Run the server.
 4). Open the browser and type the url "http://localhost:8090/ManageCredentials/id".

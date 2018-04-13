@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.san.pro.model.User;
 import com.san.pro.service.CredentialServiceImpl;
@@ -36,7 +38,11 @@ public class UserController {
 		List<User> lt = userService.list();
 		model.addAttribute("listEmployee", lt);
 		return "emplist";
-		
 	}
 	
+	@RequestMapping(value="/editEmployee", method = RequestMethod.GET)
+	public String updateUser(@RequestParam("id") int id) {
+		System.out.println("testing" + id);
+		return "edituser";
+	}	
 }

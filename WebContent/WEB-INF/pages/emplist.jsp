@@ -7,7 +7,7 @@
         <title>Home</title>
     </head>
     <body>
-    <h1>TEST PAGE</h1>
+    <h1></h1>
         <div>
         <table>
         <c:forEach var="employee" items="${listEmployee}">
@@ -16,8 +16,7 @@
 					<td>${employee.password}</td>
 					<td>${employee.email}</td>
 					<td><a href="editEmployee?id=${employee.id}">Edit</a>
-						     <a
-						href="deleteEmployee?id=${employee.id}">Delete</a></td>
+						<a href="deleteEmployee?id=${employee.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
